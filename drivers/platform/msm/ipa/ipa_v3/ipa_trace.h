@@ -10,12 +10,15 @@
  * GNU General Public License for more details.
  */
 
-#undef TRACE_SYSTEM
-#define TRACE_SYSTEM ipa
-#define TRACE_INCLUDE_FILE ipa_trace
-
 #if !defined(_IPA_TRACE_H) || defined(TRACE_HEADER_MULTI_READ)
 #define _IPA_TRACE_H
+
+#undef TRACE_SYSTEM
+#define TRACE_SYSTEM ipa
+#undef TRACE_INCLUDE_PATH
+#define TRACE_INCLUDE_PATH ../../drivers/platform/msm/ipa/ipa_v3/
+#undef TRACE_INCLUDE_FILE
+#define TRACE_INCLUDE_FILE ipa_trace
 
 #include <linux/tracepoint.h>
 
@@ -148,6 +151,4 @@ TRACE_EVENT(
 #endif /* _IPA_TRACE_H */
 
 /* This part must be outside protection */
-#undef TRACE_INCLUDE_PATH
-#define TRACE_INCLUDE_PATH .
 #include <trace/define_trace.h>

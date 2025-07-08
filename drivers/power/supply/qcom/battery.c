@@ -32,7 +32,7 @@
 #include <linux/pmic-voter.h>
 
 #if defined(CONFIG_TCT_SDM660_COMMON)
-#include <battery.h>
+#include "battery.h"
 #endif
 
 #define DRV_MAJOR_VERSION	1

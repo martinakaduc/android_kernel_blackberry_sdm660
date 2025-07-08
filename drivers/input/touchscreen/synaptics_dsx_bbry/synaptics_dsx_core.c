@@ -32,7 +32,7 @@
 #include <linux/reboot.h>
 #include <linux/regulator/consumer.h>
 #include <linux/version.h>
-#include <synaptics_dsx.h>
+#include "synaptics_dsx.h"
 #include "synaptics_dsx_core.h"
 #ifdef KERNEL_ABOVE_2_6_38
 #include <linux/input/mt.h>

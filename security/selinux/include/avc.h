@@ -15,8 +15,8 @@
 #include <linux/audit.h>
 #include <linux/lsm_audit.h>
 #include <linux/in6.h>
-#include "flask.h"
-#include "av_permissions.h"
+#include "../flask.h"
+#include "../av_permissions.h"
 #include "security.h"
 
 #if defined(CONFIG_SECURITY_SELINUX_DEVELOP) || defined(CONFIG_BBSECURE_SECURITY_SELINUX_DEVELOP_ENFORCE)

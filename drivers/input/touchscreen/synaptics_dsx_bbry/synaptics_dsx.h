@@ -175,7 +175,7 @@ struct synaptics_dsx_board_data {
 	int fw_wake_swipe_max_speed;
 	int tap_status_addr;
 	int pos_buf_addr;
-#if defined(CONFIG_BBRY) || defined(BBRY_MINISW)
+#if defined(CONFIG_TCT_SDM660_COMMON) || defined(CONFIG_BBRY) || defined(BBRY_MINISW)
 	unsigned int num_of_rx_electrodes;
 	unsigned int num_of_tx_electrodes;
 #endif

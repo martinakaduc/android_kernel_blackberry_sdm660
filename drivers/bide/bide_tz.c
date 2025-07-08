@@ -30,7 +30,7 @@
 #include <qseecom_kernel.h>
 
 /* Security Services Includes */
-#include <tzbb_protocol_public.h>
+#include "tzbb_protocol_public.h"
 
 /* Local Includes */
 #include "bide.h"

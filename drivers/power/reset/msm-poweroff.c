@@ -395,7 +395,7 @@ static void msm_restart_prepare(const char *cmd)
 			__raw_writel(0x77665514,restart_reason);
 		}
 #ifdef CONFIG_BBRY
-		 else if (is_reset_button_combo) {
+		else if (is_reset_button_combo) {
 			qpnp_pon_set_restart_reason(
 				PON_RESTART_REASON_RESET_BUTTON_COMBO);
 			__raw_writel(0x62627673, restart_reason);
@@ -405,7 +405,7 @@ static void msm_restart_prepare(const char *cmd)
 			unsigned long code;
 			int ret;
 			ret = kstrtoul(cmd + 4, 16, &code);
-			if (!ret){
+			if (!ret) {
 				__raw_writel((0x6f656d00 | (code & 0xff)),restart_reason);
 
 #ifdef CONFIG_BBRY
@@ -418,8 +418,8 @@ static void msm_restart_prepare(const char *cmd)
 			else {
 				__raw_writel(0x6F656D00, restart_reason);
 				qpnp_pon_set_restart_reason(PON_RESTART_REASON_UNKNOWN_OEM);
-			}
 #endif
+			}
 		} else if (!strncmp(cmd, "edl", 3)) {
 			qpnp_pon_set_restart_reason(PON_RESTART_REASON_EDLOAD);
 			__raw_writel(0x6F656DFF,restart_reason);

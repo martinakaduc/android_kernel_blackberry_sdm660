@@ -10,12 +10,15 @@
  * GNU General Public License for more details.
  */
 
-#undef TRACE_SYSTEM
-#define TRACE_SYSTEM rndis_ipa
-#define TRACE_INCLUDE_FILE rndis_ipa_trace
-
 #if !defined(_RNDIS_IPA_TRACE_H) || defined(TRACE_HEADER_MULTI_READ)
 #define _RNDIS_IPA_TRACE_H
+
+#undef TRACE_SYSTEM
+#define TRACE_SYSTEM rndis_ipa
+#undef TRACE_INCLUDE_PATH
+#define TRACE_INCLUDE_PATH ../../drivers/net/ethernet/msm/
+#undef TRACE_INCLUDE_FILE
+#define TRACE_INCLUDE_FILE rndis_ipa_trace
 
 #include <linux/tracepoint.h>
 
@@ -76,6 +79,4 @@ TRACE_EVENT(
 #endif /* _RNDIS_IPA_TRACE_H */
 
 /* This part must be outside protection */
-#undef TRACE_INCLUDE_PATH
-#define TRACE_INCLUDE_PATH .
 #include <trace/define_trace.h>
